@@ -32,6 +32,9 @@ int main(int argc, char *argv[])
 
 	buffer = create_bitmap(SCREEN_W, SCREEN_H);
 
+
+
+
 	while (!key[KEY_ESC]) {
 		blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
 

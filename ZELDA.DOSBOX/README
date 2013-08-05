@@ -1,3 +1,9 @@
+
+You can run the program by running PLAY.EXE ins this directory,
+(probably in dosbox or dos, see http://www.dosbox.com).
+
+Press 'Esc' to quit the program.
+
 This software is a small game for DJGPP's allegro game library in dosbox,
 a MS-DOS x86 emulator. dosbox can be found at http://www.dosbox.com/
 See ftp.delorie.com for djgpp C/C++ compiler. You need to setup 
