@@ -24,6 +24,10 @@ int main(int argc, char *argv[])
 
 	allegro_init();
 	install_keyboard();
+	install_timer();
+	int buttons = install_mouse();
+	
+	set_color_depth(32);
 
 	if (set_gfx_mode(GFX_SAFE, 640, 480, 0, 0) != 0) {
 		set_gfx_mode(GFX_TEXT, 0, 0, 0, 0);
@@ -35,13 +39,13 @@ int main(int argc, char *argv[])
 
 
 	zelda::image::Image *img = new zelda::image::Image;
-	img->load_pcx("./pics/test.pcx");
+	img->load_pcx("./pics/test3.pcx");
 
 	while (!key[KEY_ESC]) {
 
 		blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
 		blit(img->get_bmp(), screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
-
+		usleep(50000);
 	}
 
 	destroy_bitmap(buffer);
