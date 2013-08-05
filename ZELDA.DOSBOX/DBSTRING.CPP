@@ -15,6 +15,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "DBSTRING.H"
 
@@ -23,20 +24,65 @@ namespace dosbox
 namespace std
 {
 
+string::string(const char *s)
+{
+	int i = 0;
+	int len = strlen(s);
+	if (_s == NULL)
+		_s = (char *)malloc(len);
+
+	while (*_s++ = *s++ && i++)
+		if (i >= strlen(s))
+			break; 	
+
+}
+
 string::string()
-{}
+{
+	_s = (char *)malloc(1);
+	memcpy(_s, "\0", 1);	
+}
 
 string::~string()
-{}
+{
+	free(_s);
+}
 
-void *string::dispatch(const char *message)
+char string::operator[](int i)
 {
 
-	switch (atoi(message)){
-	}
+	return _s[i];
 
-	
+}
 
+string string::operator=(string s)
+{
+	int i = 0;
+	int len = strlen(s.deepcopy());
+
+	free(_s);
+	_s = (char *)malloc(len);
+	const char *si = (char *)s.deepcopy();
+	while (*_s++ = *si++ && i++)
+		if (i >= strlen(si))
+			break; 	
+	return *this;
+}	
+
+const char *string::deepcopy()
+{
+	return (const char *)_s;	
+}
+
+const char*string::c_str()
+{
+	int i, len = strlen(_s);
+	char *s = (char *)malloc(len);
+	while (*s++ = *_s++)
+		if (i >= len)
+			break;
+
+	return s;	
 }
 
 }//namespace std

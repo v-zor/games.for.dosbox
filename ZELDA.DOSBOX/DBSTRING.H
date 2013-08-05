@@ -28,12 +28,18 @@ class string
 {
 	public:
 	string();
+	string(const char *s);
 	virtual ~string();
-	
-	void *dispatch(const char *message);
-	
-	protected:
-	int apply();
+
+	private:
+	char *_s;
+	const char *deepcopy();
+
+	public:
+	char operator[](int i);
+	string operator=(string s);
+
+	const char *c_str();
 };
 
 }

@@ -4,7 +4,7 @@ INCLUDES= -IC:\DJGPP\ALLEGRO\INCLUDE
 all: main.exe
 
 main.exe: dbstring.o actor.o actormailbox.o actorevent.o bmp.o image.o main.o
-	$(CXX) -o PLAY.EXE MAIN.O BMP.O ACTOR.O ACTORMAILBOX.O ACTOREVENT.O IMAGE.O -LC:\DJGPP\LIB -lstdcxx -LC:\DJGPP\ALLEGRO\LIB -lalleg
+	$(CXX) -o PLAY.EXE MAIN.O BMP.O ACTOR.O ACTORMAILBOX.O ACTOREVENT.O IMAGE.O -LC:\DJGPP\ALLEGRO\LIB -lalleg
 
 
 dbstring.o:
@@ -24,4 +24,3 @@ main.o:
 
 clean:
 	del *.o;
-	del PLAY.EXE
