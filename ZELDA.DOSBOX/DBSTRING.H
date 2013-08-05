@@ -13,18 +13,22 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef DB_ACTOR_H
-#define DB_ACTOR_H
+#ifndef DB_STRING_H
+#define DB_STRING_H
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "allegro.h"
 
-class Actor
+namespace dosbox
+{
+namespace std 
+{
+
+class string
 {
 	public:
-	Actor();
-	virtual ~Actor();
+	string();
+	virtual ~string();
 	
 	void *dispatch(const char *message);
 	
@@ -32,4 +36,6 @@ class Actor
 	int apply();
 };
 
+}
+}
 #endif	

@@ -13,6 +13,9 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+#ifndef DB_ACTOREVENT_H
+#define DB_ACTOREVENT_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "allegro.h"
@@ -25,4 +28,5 @@ class ActorEvent
 
 	void *data;	
 };
-	
+
+#endif	

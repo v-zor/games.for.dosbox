@@ -13,8 +13,8 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef _BMP_H_
-#define _BMP_H_
+#ifndef DB_BMP_H_
+#define DB_BMP_H_
 
 typedef int LONG;
 typedef unsigned short WORD;

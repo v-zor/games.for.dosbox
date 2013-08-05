@@ -13,6 +13,9 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+#ifndef DB_IMAGE_H
+#define DB_IMAGE_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "allegro.h"
@@ -26,3 +29,5 @@ class Image : public Actor
 	int db_image_load_pcx(BITMAP *bmp, const char *filename);
 
 };
+
+#endif

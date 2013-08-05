@@ -13,23 +13,31 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef DB_ACTOR_H
-#define DB_ACTOR_H
-
 #include <stdio.h>
 #include <stdlib.h>
-#include "allegro.h"
+#include "bmp.h"
 
-class Actor
+PBITMAPFILEHEADER file_header;
+PBITMAPINFOHEADER info_header;
+
+
+char *fill()
 {
-	public:
-	Actor();
-	virtual ~Actor();
-	
-	void *dispatch(const char *message);
-	
-	protected:
-	int apply();
-};
+	char *buffer;
 
-#endif	
+	FILE *fp = fopen("test.bmp", "r");
+
+	fseek(fp, 0, SEEK_END);
+	int length = ftell(fp);
+
+	buffer = (char *)malloc(length * sizeof(char));
+
+	fread(buffer, sizeof(char), length+1, fp);
+
+	file_header = (PBITMAPFILEHEADER)(&buffer[0]);
+	info_header = (PBITMAPINFOHEADER)(&buffer[0] + sizeof(BITMAPFILEHEADER));
+
+	return buffer;
+
+}
+

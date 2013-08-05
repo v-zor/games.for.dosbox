@@ -1,0 +1,5 @@
+
+. set the include and link directories in the variable INCLUDES in
+the Makefile, then run 'make'.
+
+See also the README file.

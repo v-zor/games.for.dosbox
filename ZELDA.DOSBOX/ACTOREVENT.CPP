@@ -13,23 +13,16 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef DB_ACTOR_H
-#define DB_ACTOR_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "allegro.h"
 
-class Actor
-{
-	public:
-	Actor();
-	virtual ~Actor();
-	
-	void *dispatch(const char *message);
-	
-	protected:
-	int apply();
-};
+#include "actorevent.h"
 
-#endif	
+
+ActorEvent::ActorEvent()
+{}
+
+ActorEvent::~ActorEvent()
+{}
+
