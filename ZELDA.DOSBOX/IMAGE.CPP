@@ -23,13 +23,12 @@ namespace zelda
 namespace image
 {
  
-int db_image_load_pcx(BITMAP *bmp, const char *filename)
+int Image::load_pcx(BITMAP *bmp, const char *filename)
 {
 	PALETTE palette;
 
-
-	bmp = load_bitmap(filename, palette);
-	if (!bmp) {
+	_bmp = load_bitmap(filename, palette);
+	if (!_bmp) {
 		///abort_on_error("image_load_pcx : Could not load pcx from filename");
 		return -1;
 	}

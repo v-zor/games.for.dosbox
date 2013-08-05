@@ -25,13 +25,14 @@ namespace zelda
 namespace image
 {
 
-struct db_image { BITMAP *bitmap; };
 
 class Image 
 {
 	public:
-	int db_image_load_pcx(BITMAP *bmp, const char *filename);
-
+	int load_pcx(BITMAP *bmp, const char *filename);
+	
+	private:
+	BITMAP *_bmp;	
 };
 
 }//namespace image
