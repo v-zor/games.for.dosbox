@@ -1,4 +1,4 @@
 games.for.dosbox
 ================
 
-Some engines and games for use with the djgpp and allegro libraries for ms-dos (e.g. in the dosbox emulator)
+Some game systems for use in dosbox with the DJGPP development kit, including allegro 4
