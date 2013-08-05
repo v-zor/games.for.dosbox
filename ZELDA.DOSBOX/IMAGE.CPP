@@ -23,7 +23,7 @@ namespace zelda
 namespace image
 {
  
-int Image::load_pcx(BITMAP *bmp, const char *filename)
+int Image::load_pcx(const char *filename)
 {
 	PALETTE palette;
 

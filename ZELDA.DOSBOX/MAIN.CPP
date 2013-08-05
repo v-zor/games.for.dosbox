@@ -16,6 +16,7 @@
 
 #include <stdio.h>
 #include "allegro.h"
+#include "image.h"
 
 int main(int argc, char *argv[])
 {
@@ -33,10 +34,13 @@ int main(int argc, char *argv[])
 	buffer = create_bitmap(SCREEN_W, SCREEN_H);
 
 
-
+	zelda::image::Image *img = new zelda::image::Image;
+	img->load_pcx("./pics/test.pcx");
 
 	while (!key[KEY_ESC]) {
+
 		blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+		blit(img->get_bmp(), screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
 
 	}
 
