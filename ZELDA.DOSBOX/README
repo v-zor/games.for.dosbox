@@ -19,14 +19,14 @@ See ftp.delorie.com for djgpp C/C++ compiler. You need to setup
 gpp and make to compile this. Note that you must unzip djgpp's zipfiles with unzip32.exe
 which can also be found on ftp.delorie.com
 
-You need the following zipfiles :
+You need the following *b zipfiles :
 djdev
 gcc473
 bnu223
 gpp273
 txi
 csdpmi
-mak
+mak3791
 unzip32.exe
 
 Do not forget the unix2dos command which can be find at http://www.programmersheaven.com/ to make your files dos compatible.
