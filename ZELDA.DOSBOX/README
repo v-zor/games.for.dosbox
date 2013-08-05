@@ -4,6 +4,11 @@ You can run the program by running PLAY.EXE ins this directory,
 
 Press 'Esc' to quit the program.
 
+Clocking:
+==========
+
+Try to adjust the uclock code in main.cpp
+
 Building:
 ==========
 

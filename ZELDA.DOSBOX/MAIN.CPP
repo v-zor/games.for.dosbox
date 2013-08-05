@@ -15,6 +15,7 @@
 */
 
 #include <stdio.h>
+#include <time.h>
 #include "allegro.h"
 #include "image.h"
 
@@ -35,6 +36,7 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
+	uclock_t start;
 	buffer = create_bitmap(SCREEN_W, SCREEN_H);
 
 
@@ -45,7 +47,12 @@ int main(int argc, char *argv[])
 
 		blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
 		blit(img->get_bmp(), screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
-		usleep(50000);
+
+		start = uclock();
+		while (uclock() < start + UCLOCKS_PER_SEC / 1500)
+			;	
+		//usleep(50000);
+
 	}
 
 	destroy_bitmap(buffer);
