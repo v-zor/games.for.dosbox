@@ -3,12 +3,14 @@ CFLAGS=-O
 INCLUDES= -IC:\DJGPP\ALLEGRO\INCLUDE
 all: main.exe
 
-main.exe: dbstring.o actor.o actormailbox.o actorevent.o bmp.o image.o main.o
+main.exe: dbstring.o dbvector.o actor.o actormailbox.o actorevent.o bmp.o image.o main.o
 	$(CXX) -o PLAY.EXE MAIN.O BMP.O ACTOR.O ACTORMAILBOX.O ACTOREVENT.O IMAGE.O -LC:\DJGPP\ALLEGRO\LIB -lalleg
 
 
 dbstring.o:
 	$(CXX) $(INCLUDES) -c DBSTRING.CPP
+dbvector.o:
+	$(CXX) $(INCLUDES) -c DBVECTOR.CPP
 actor.o:
 	$(CXX) $(INCLUDES) -c ACTOR.CPP
 actormailbox.o:

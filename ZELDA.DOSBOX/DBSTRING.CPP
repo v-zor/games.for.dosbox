@@ -69,9 +69,34 @@ string string::operator=(string s)
 	return *this;
 }	
 
+bool string::operator==(string s)
+{
+	int i = 0;
+	int len = strlen(s.deepcopy());
+
+	free(_s);
+	_s = (char *)malloc(len);
+	const char *si = (char *)s.deepcopy();
+	while (*_s++ == *si++ && i++)
+		if (i >= strlen(si))
+			return true; 	
+	return false;
+}	
+
 const char *string::deepcopy()
 {
 	return (const char *)_s;	
+}
+
+const char*string::shallowcopy()
+{
+	int i, len = strlen(_s);
+	char *s = (char *)malloc(len);
+	while (*s++ = *_s++)
+		if (i >= len)
+			break;
+
+	return s;	
 }
 
 const char*string::c_str()

@@ -13,8 +13,8 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-#ifndef DB_STRING_H
-#define DB_STRING_H
+#ifndef DB_VECTOR_H
+#define DB_VECTOR_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,24 +24,29 @@ namespace dosbox
 namespace std 
 {
 
-class string
+template<typename T>
+class vector 
 {
 	public:
-	string();
-	string(const char *s);
-	virtual ~string();
+	vector();
+	vector(int sz);
+	virtual ~vector();
 
 	private:
-	char *_s;
+	void *_s;
+	int _len;
+	int _maxlen;
 
 	public:
-	const char *deepcopy();
-	const char *shallowcopy();
-	char operator[](int i);
-	string operator=(string s);
-	bool operator==(string s);
+	void push_back(T const& t);
+	int size();
+	void reserve(int sz);
+	//void *deepcopy();
+	//void *shallowcopy();
+	const T& operator[](int i);
+	const vector<T>& operator=(vector<T>& s);
+	//bool operator==(vector s);
 
-	const char *c_str();
 };
 
 }
