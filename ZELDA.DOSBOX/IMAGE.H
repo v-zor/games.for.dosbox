@@ -19,15 +19,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "allegro.h"
-#include "ACTOR.H"
+
+namespace zelda
+{
+namespace image
+{
 
 struct db_image { BITMAP *bitmap; };
 
-class Image : public Actor
+class Image 
 {
 	public:
 	int db_image_load_pcx(BITMAP *bmp, const char *filename);
 
 };
 
+}//namespace image
+}//namespace zelda
 #endif

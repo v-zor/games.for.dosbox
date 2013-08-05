@@ -18,6 +18,11 @@
 #include "allegro.h"
 #include "IMAGE.H"
 
+namespace zelda
+{
+namespace image
+{
+ 
 int db_image_load_pcx(BITMAP *bmp, const char *filename)
 {
 	PALETTE palette;
@@ -31,4 +36,7 @@ int db_image_load_pcx(BITMAP *bmp, const char *filename)
 
 	return 0;
 
-}	
+}
+
+}//namespace image
+}//namespace zelda

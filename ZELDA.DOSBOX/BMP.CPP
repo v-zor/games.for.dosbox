@@ -17,6 +17,11 @@
 #include <stdlib.h>
 #include "bmp.h"
 
+namespace zelda
+{
+namespace image
+{
+
 PBITMAPFILEHEADER file_header;
 PBITMAPINFOHEADER info_header;
 
@@ -41,3 +46,5 @@ char *fill()
 
 }
 
+}//namespace image
+}//namespace zelda

@@ -16,6 +16,11 @@
 #ifndef DB_BMP_H_
 #define DB_BMP_H_
 
+namespace zelda 
+{
+namespace image
+{ 
+
 typedef int LONG;
 typedef unsigned short WORD;
 typedef unsigned int DWORD;
@@ -41,5 +46,6 @@ LONG biYPelsPerMeter;
 DWORD biClrUsed;
 DWORD biClrImportant;
 } BITMAPINFOHEADER, *PBITMAPINFOHEADER;
-
+}//namespace image
+}//namespace zelda
 #endif
