@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "allegro.h"
+#include "DBSTRING.H"
 
 class Actor
 {
@@ -26,7 +27,7 @@ class Actor
 	Actor();
 	virtual ~Actor();
 	
-	void *dispatch(const char *message);
+	void *dispatch(stl::std::string const& message);
 	
 	protected:
 	int apply();

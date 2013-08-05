@@ -20,13 +20,15 @@
 #include <stdlib.h>
 #include "allegro.h"
 
+template<typename T>
 class ActorEvent
 {
 	public:
-	ActorEvent();
+	ActorEvent(int t);
 	virtual ~ActorEvent();
 
-	void *data;	
+	int _type;
+	T _event;
 };
 
 #endif	

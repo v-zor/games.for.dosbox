@@ -25,10 +25,10 @@ Actor::Actor()
 Actor::~Actor()
 {}
 
-void *Actor::dispatch(const char *message)
+void *Actor::dispatch(stl::std::string const& message)
 {
 
-	switch (atoi(message)){
+	switch (atoi(const_cast<stl::std::string&>(message).c_str())){
 	}
 
 	

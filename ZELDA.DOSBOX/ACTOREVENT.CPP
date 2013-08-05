@@ -19,10 +19,11 @@
 
 #include "actorevent.h"
 
-
-ActorEvent::ActorEvent()
+template<typename T>
+ActorEvent<T>::ActorEvent(int type) : _type(type)
 {}
 
-ActorEvent::~ActorEvent()
+template<typename T>
+ActorEvent<T>::~ActorEvent()
 {}
 

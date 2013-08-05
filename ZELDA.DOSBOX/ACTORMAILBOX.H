@@ -18,7 +18,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "allegro.h"
+#include "dbvector.h"
 
 class ActorMailbox
 {
@@ -29,7 +29,9 @@ class ActorMailbox
 	void *dispatch(const char *message);
 	
 	protected:
-	int apply();
+	template<typename R, typename F, typename S> 
+	R apply(F f, S args);
+	/////stl::std::vector<> _mailbox;
 };
 
 #endif	

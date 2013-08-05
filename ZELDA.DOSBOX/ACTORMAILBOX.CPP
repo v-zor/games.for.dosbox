@@ -18,6 +18,7 @@
 #include "allegro.h"
 
 #include "actormailbox.h"
+#include "dbfunctional.h"
 
 ActorMailbox::ActorMailbox()
 {}
@@ -32,5 +33,12 @@ void *ActorMailbox::dispatch(const char *message)
 	}
 
 	
+}
+
+template<typename R, typename F, typename S> 
+R ActorMailbox::apply(F f, S args)
+{
+	//std::bind(f, std::forward<S>(args));
+	stl::std::bind(f, args);
 
 }	
