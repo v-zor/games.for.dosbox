@@ -4,6 +4,15 @@ You can run the program by running PLAY.EXE ins this directory,
 
 Press 'Esc' to quit the program.
 
+Building:
+==========
+
+You need to have libstl-dos.a installed.
+This can be found at the git repository http://github.com/v-zor/libs.for.dos
+The library is called LIBSTL and must be linked against so change your makefile
+paths to include it.
+
+
 This software is a small game for DJGPP's allegro game library in dosbox,
 a MS-DOS x86 emulator. dosbox can be found at http://www.dosbox.com/
 See ftp.delorie.com for djgpp C/C++ compiler. You need to setup 

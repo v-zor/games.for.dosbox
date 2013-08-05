@@ -1,16 +1,14 @@
 CXX=gpp.exe
 CFLAGS=-O
+LIBSTLDOSINCLUDES= -IC:\DJGPP\LIBSTL
+LIBSTLDOSLIBS= -LC:\DJGPP\LIBSTL
 INCLUDES= -IC:\DJGPP\ALLEGRO\INCLUDE
+LIBS= -LC:\DJGPP\ALLEGRO\LIB
 all: main.exe
 
-main.exe: dbstring.o dbvector.o actor.o actormailbox.o actorevent.o bmp.o image.o main.o
-	$(CXX) -o PLAY.EXE MAIN.O BMP.O ACTOR.O ACTORMAILBOX.O ACTOREVENT.O IMAGE.O -LC:\DJGPP\ALLEGRO\LIB -lalleg
+main.exe: actor.o actormailbox.o actorevent.o bmp.o image.o main.o
+	$(CXX) -o PLAY.EXE MAIN.O BMP.O ACTOR.O ACTORMAILBOX.O ACTOREVENT.O IMAGE.O $(LIBS) -lalleg $(LIBSTLDOSLIBS) -lstl-dos
 
-
-dbstring.o:
-	$(CXX) $(INCLUDES) -c DBSTRING.CPP
-dbvector.o:
-	$(CXX) $(INCLUDES) -c DBVECTOR.CPP
 actor.o:
 	$(CXX) $(INCLUDES) -c ACTOR.CPP
 actormailbox.o:
